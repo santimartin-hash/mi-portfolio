@@ -1,0 +1,292 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+/*fondo particulas*/
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+}
+
+/* Estilos del contenedor del botón */
+.button-container {
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    left: 15px;
+    --color: #a5a5b0;
+    /* Color de la luna */
+    background-color: rgba(255, 255, 255, 0.123);
+    border: solid 2px rgba(255, 255, 255, 0.387);
+    /* fondo blanco semi-transparente */
+    backdrop-filter: blur(5px);
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+    border-radius: 100%;
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+}
+
+.button-container.dark-mode {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Color de fondo cuando la luna está visible */
+    border: solid 1px rgba(0, 0, 0, 0.449);
+}
+
+/* Estilos para la luna (negra) */
+.button-container .moon {
+    position: relative;
+    animation: keyframes-fill .5s;
+    fill: #000000;
+    /* Luna negra */
+}
+
+/* Estilos para el sol (blanco) */
+.button-container .sun {
+    position: relative;
+    display: none;
+    animation: keyframes-fill .5s;
+    fill: #ffffff;
+    /* Sol blanco */
+}
+
+/* ------ Cuando se activa el evento "checked" ------ */
+.button-container input:checked~.moon {
+    display: none;
+    /* Oculta la luna cuando se activa el modo de sol */
+}
+
+.button-container input:checked~.sun {
+    display: block;
+    /* Muestra el sol cuando se activa el modo de sol */
+}
+
+/* ------ Ocultar el checkbox por defecto ------ */
+.button-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ------ Animación ------ */
+@keyframes keyframes-fill {
+    0% {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+    }
+
+    75% {
+        transform: rotate(25deg);
+    }
+}
+
+
+.social-login-icons {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border: solid 2px rgba(255, 255, 255, 0.345);
+    border-radius: 50px;
+    width: 170px;
+    padding: 10px;
+    /* fondo blanco semi-transparente */
+    backdrop-filter: blur(5px);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+  }
+  .social-login-icons svg {
+    width: 40px;
+  }
+  
+  .social-icon-1,
+  .social-icon-1-1,
+  .social-icon-2,
+  .social-icon-2-2,
+  .social-icon-3,
+  .social-icon-3-3,
+  .social-icon-4,
+  .social-icon-4-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 15px 0 0px 0;
+  }
+  
+  .icon svg {
+    fill: #ffffff;
+  }
+  
+  .socialcontainer {
+    height: 80px;
+    overflow: hidden;
+  }
+  .social-icon-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  }
+  .social-icon-1 svg,
+  .social-icon-2 svg,
+  .social-icon-3 svg,
+  .social-icon-4 svg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+  }
+  .social-icon-1-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0, 0);
+  }
+  .socialcontainer:hover .social-icon-1 {
+    transform: translateY(-65px);
+  }
+  .socialcontainer:hover .social-icon-1 svg,
+  .socialcontainer:hover .social-icon-2 svg,
+  .socialcontainer:hover .social-icon-3 svg,
+  .socialcontainer:hover .social-icon-4 svg {
+    opacity: 1;
+  }
+  .social-icon-2 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: linear-gradient(
+      72.44deg,
+      #ff7a00 11.92%,
+      #ff0169 51.56%,
+      #d300c5 85.69%
+    );
+  }
+  .socialcontainer:hover .social-icon-2 {
+    transform: translateY(-65px);
+  }
+  .social-icon-3 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: #316ff6;
+  }
+  
+  .socialcontainer:hover .social-icon-3 {
+    transform: translateY(-65px);
+  }
+  .social-icon-4 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  
+    background: linear-gradient(
+      180deg,
+      rgba(129, 34, 144, 1) 0%,
+      rgba(77, 34, 124, 1) 91%
+    );
+  }
+  
+  .socialcontainer:hover .social-icon-4 {
+    transform: translateY(-65px);
+  }
+
+/* Ajustes para pantallas más pequeñas (móviles y tabletas) */
+@media (max-width: 767px) {
+    .social-login-icons {
+        width: 140px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .social-login-icons svg {
+        width: 20px; /* Reducir tamaño de los íconos SVG */
+    }
+
+    .socialcontainer:hover .social-icon-1 {
+        transform: translateY(-60px);
+      }
+      .socialcontainer:hover .social-icon-2 {
+        transform: translateY(-60px);
+      }
+
+      .socialcontainer:hover .social-icon-3 {
+        transform: translateY(-60px);
+      }
+
+      .socialcontainer:hover .social-icon-4 {
+        transform: translateY(-60px);
+      }
+
+    .social-icon-1,
+    .social-icon-1-1,
+    .social-icon-2,
+    .social-icon-2-2,
+    .social-icon-3,
+    .social-icon-3-3,
+    .social-icon-4,
+    .social-icon-4-4 {
+        width: 40px; /* Reducir tamaño de los íconos */
+        height: 40px;
+        margin: 20px 0 0 0; /* Reducir margen */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-login-icons {
+        width: 110px;
+        height: 30px;
+        padding: 6px;
+    }
+
+    .social-login-icons svg {
+        width: 15px; /* Aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .socialcontainer:hover .social-icon-1 {
+        transform: translateY(-55px);
+      }
+      .socialcontainer:hover .social-icon-2 {
+        transform: translateY(-55px);
+      }
+
+      .socialcontainer:hover .social-icon-3 {
+        transform: translateY(-55px);
+      }
+
+      .socialcontainer:hover .social-icon-4 {
+        transform: translateY(-55px);
+      }
+    .social-icon-1,
+    .social-icon-1-1,
+    .social-icon-2,
+    .social-icon-2-2,
+    .social-icon-3,
+    .social-icon-3-3,
+    .social-icon-4,
+    .social-icon-4-4 {
+        width: 30px; /* Aún más pequeño en pantallas muy pequeñas */
+        height: 30px;
+        margin: 25px 0 0 0;
+    }
+}
