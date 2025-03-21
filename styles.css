@@ -5,6 +5,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+ 
 }
 
 /*fondo particulas*/
@@ -289,4 +293,22 @@ body {
         height: 30px;
         margin: 25px 0 0 0;
     }
+}
+
+.contenedorTransparentePrincipal {
+    display: flex;
+    justify-content: center;   /* Centra el contenido horizontalmente */
+    align-items: center;       /* Centra el contenido verticalmente */
+    width: 70vw;               /* 70% del ancho de la ventana */
+    height: 80vh;              /* 80% de la altura de la ventana */
+    background-color: rgba(7, 7, 7, 0.26); /* Fondo semi-transparente */
+    backdrop-filter: blur(5px); /* Filtro de desenfoque */
+    position: absolute;        /* Fijar la posición relativa a la ventana */
+    top: 50%;                  
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado exacto */
+    padding: 5vh 5vw;          /* Espaciado interno para respetar márgenes */
+    box-sizing: border-box;    /* Para que padding no afecte el tamaño total */
+    z-index: 1;                /* Asegura que esté por encima de otros elementos */
+    border-radius: 40px;
 }
