@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeToggle = document.getElementById("theme-toggle");
   const buttonContainer = document.querySelector(".button-container");
   const socialContainer = document.querySelector(".social-login-icons");
+  const contenedorTransparentePrincipal = document.querySelector(".contenedorTransparentePrincipal");
+  
   const socialIcons = document.querySelectorAll(".icon svg");
   // Verificar el tema almacenado en localStorage (invertido)
   const currentTheme = localStorage.getItem("theme") === "light" ? "dark" : "light";
@@ -12,12 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonContainer.style.border = "solid 2px rgba(0, 0, 0, 0.38)";
       socialContainer.style.backgroundColor = "rgba(0, 0, 0, 0.26)";
       socialContainer.style.border = "solid 2px rgba(0, 0, 0, 0.38)";
+      contenedorTransparentePrincipal.style.backgroundColor = "rgba(255, 255, 255, 0.34)";
+
       socialIcons.forEach(icon => icon.style.fill = "#000000");
     } else {
       buttonContainer.style.backgroundColor = "rgba(255, 255, 255, 0.123)";
       buttonContainer.style.border = "solid 2px rgba(255, 255, 255, 0.123)";
       socialContainer.style.backgroundColor = "rgba(255, 255, 255, 0.123)";
       socialContainer.style.border = "solid 2px rgba(255, 255, 255, 0.123)";
+      contenedorTransparentePrincipal.style.backgroundColor = "rgba(0, 0, 0, 0.57)";
       socialIcons.forEach(icon => icon.style.fill = "#ffffff");
     }
   }
@@ -70,7 +75,7 @@ const colorSecondary = theme === "dark" ? "#000000" : "#ffffff";
 
 const configDesktop = {
   particles: {
-    number: { value: 290, density: { enable: false, value_area: 800 } },
+    number: { value: 190, density: { enable: false, value_area: 800 } },
     color: { value: colorPrimary },
     shape: { type: "circle", stroke: { width: 0, color: colorSecondary }, polygon: { nb_sides: 4 } },
     opacity: { value: 1, random: true },
@@ -94,7 +99,7 @@ const configDesktop = {
 
 const configTablet = {
   particles: {
-    number: { value: 190, density: { enable: false, value_area: 800 } },
+    number: { value: 110, density: { enable: false, value_area: 800 } },
     color: { value: colorPrimary },
     shape: { type: "circle", stroke: { width: 0, color: colorSecondary }, polygon: { nb_sides: 4 } },
     opacity: { value: 0.9, random: true },

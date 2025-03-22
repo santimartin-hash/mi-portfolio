@@ -48,6 +48,7 @@ body {
     box-shadow: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
+    z-index: 2;
 }
 
 .button-container.dark-mode {
@@ -121,6 +122,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 2;
    
   }
   .social-login-icons svg {
@@ -216,7 +218,7 @@ body {
   }
 
 /* Ajustes para pantallas más pequeñas (móviles y tabletas) */
-@media (max-width: 767px) {
+@media (max-width: 1920px) {
     .social-login-icons {
         width: 140px;
         height: 40px;
@@ -256,7 +258,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1920px) and (max-height: 1000px) {
     .social-login-icons {
         width: 110px;
         height: 30px;
@@ -295,20 +297,29 @@ body {
     }
 }
 
+/* Estilos del contenedor */
 .contenedorTransparentePrincipal {
-    display: flex;
-    justify-content: center;   /* Centra el contenido horizontalmente */
-    align-items: center;       /* Centra el contenido verticalmente */
-    width: 70vw;               /* 70% del ancho de la ventana */
-    height: 80vh;              /* 80% de la altura de la ventana */
-    background-color: rgba(7, 7, 7, 0.26); /* Fondo semi-transparente */
-    backdrop-filter: blur(5px); /* Filtro de desenfoque */
-    position: absolute;        /* Fijar la posición relativa a la ventana */
-    top: 50%;                  
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centrado exacto */
-    padding: 5vh 5vw;          /* Espaciado interno para respetar márgenes */
-    box-sizing: border-box;    /* Para que padding no afecte el tamaño total */
-    z-index: 1;                /* Asegura que esté por encima de otros elementos */
-    border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.644);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5vh 5vw; /* Espaciado dinámico basado en la altura y el ancho */
+  box-sizing: border-box;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Media query para pantallas más pequeñas (menores a 1575px) */
+@media (max-width: 829px)  {
+  .contenedorTransparentePrincipal {
+    width: 100vw;  /* Ocupa todo el ancho */
+    height: 70vh;  /* Mantén un alto proporcional */
+  }
 }
