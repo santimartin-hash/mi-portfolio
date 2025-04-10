@@ -75,7 +75,7 @@ const colorSecondary = theme === "dark" ? "#000000" : "#ffffff";
 
 const configDesktop = {
   particles: {
-    number: { value: 190, density: { enable: false, value_area: 800 } },
+    number: { value: 290, density: { enable: false, value_area: 800 } },
     color: { value: colorPrimary },
     shape: { type: "circle", stroke: { width: 0, color: colorSecondary }, polygon: { nb_sides: 4 } },
     opacity: { value: 1, random: true },

@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Lalezar&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 
@@ -109,13 +110,22 @@
 </div>
 
     <div class="contenedorTransparentePrincipal">
-        
+      <span id="typed-text"></span>
+    
     </div>
 
     </div>
 
     <script>
-    </script>
+      new Typed("#typed-text", {
+          strings: ["Transformo ideas en soluciones digitales eficientes y escalables." ,"Santiago Martín | Desarrollador web y multiplataforma"
+                    ],
+          typeSpeed: 50, // Velocidad de escritura
+          backSpeed: 25, // Velocidad de borrado (si lo usas)
+          showCursor: false, // Ocultar cursor
+          loop: false // No repetir animación
+      });
+  </script>
     <script type="text/javascript" src="particles.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>

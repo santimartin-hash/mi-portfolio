@@ -5,10 +5,9 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    font-family: "Libre Baskerville", serif;
+    
     font-weight: 400;
     font-style: normal;
- 
 }
 
 /*fondo particulas*/
@@ -300,20 +299,27 @@ body {
 /* Estilos del contenedor */
 .contenedorTransparentePrincipal {
   display: flex;
+  flex-direction: column; /* Para que el contenido se apile */
   justify-content: center;
   align-items: center;
+  
   width: 70vw;
-  height: 100vh;
+  height: 100vh; /* Un tamaño fijo pero no toda la pantalla */
   background-color: rgba(0, 0, 0, 0.644);
   backdrop-filter: blur(10px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 5vh 5vw; /* Espaciado dinámico basado en la altura y el ancho */
+  padding: 5vh 5vw;
   box-sizing: border-box;
   z-index: 1;
   border-radius: 10px;
+  overflow: auto; /* Permitir scroll dentro del contenedor */
+  /*ocultar scroll */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
 }
 
 /* Media query para pantallas más pequeñas (menores a 1575px) */
@@ -322,4 +328,10 @@ body {
     width: 100vw;  /* Ocupa todo el ancho */
     height: 70vh;  /* Mantén un alto proporcional */
   }
+}
+
+#typed-text{
+  font-family: "Lalezar", system-ui;
+  font-size: 40px;
+  color: white;
 }
